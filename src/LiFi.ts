@@ -1,0 +1,13 @@
+import LIFI from '@lifi/sdk'
+
+import { getRpcs } from './config/connectors'
+
+const LiFi = new LIFI({
+  apiUrl: process.env.REACT_APP_API_URL,
+  rpcs: getRpcs(),
+  defaultRouteOptions: {
+    integrator: 'cryptotransferto.xyz',
+  },
+})
+
+export default LiFi
